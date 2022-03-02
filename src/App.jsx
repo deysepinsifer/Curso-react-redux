@@ -6,7 +6,13 @@ import Primeiro from "./components/basicos/Primeiro";
 import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/fragmento";
 import Familia from "./components/basicos/Familia";
+import ListaAlunos from "./components/repeticao/ListaAlunos";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
+import TabelaProdutos from "./components/repeticao/TabelaProdutos";
+import ParOuImpar from "./components/Condicional/ParOuImpar";
+import UsuarioInfo from "./components/Condicional/UsusarioInfo";
+import If from "./components/Condicional/If";
+
 
 export default () => (
   <div className="App">
@@ -14,11 +20,25 @@ export default () => (
 
     <div className="Cards">
 
+    <Card titulo="#08 - Renderização Condicional " color="#D8BFD8">
+     <ParOuImpar numero = {20}></ParOuImpar>
+     <UsuarioInfo usuario={{nome: "Fernando"}}/>
+     <UsuarioInfo usuario={{email: "Fer@nando.com"}}/>
+    </Card>
+
+    <Card titulo="#07 - Desafio Repetição " color="#32CD32">
+      <TabelaProdutos></TabelaProdutos>
+    </Card>
+
+    <Card titulo="#06 - Repetição" color="brown">
+      <ListaAlunos></ListaAlunos>
+    </Card>
+
     <Card titulo="#05 - Componente com Filhos" color="orange">
-     <Familia sobrenome="Ferreira"></Familia>
-      <FamiliaMembro nome="Pedro"></FamiliaMembro>
-      <FamiliaMembro nome="Maria"></FamiliaMembro>
-      <FamiliaMembro nome="Paulo"></FamiliaMembro>
+     <Familia sobrenome="Ferreira"/>
+     <FamiliaMembro nome="Pedro"/>
+      <FamiliaMembro nome="Maria"/>
+       <FamiliaMembro nome="Paulo"/>
     </Card>
 
     <Card titulo="#04 - Desafio Aleatório" color="green">
